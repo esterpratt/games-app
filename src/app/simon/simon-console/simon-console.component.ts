@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'simon-console',
@@ -6,12 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simon-console.component.scss']
 })
 export class SimonConsoleComponent implements OnInit {
-  colors = ['red', 'blue', 'green', 'yellow'];
+  @Input() colors: string[];
+  @Input() colorMoves: Observable<string[]>;
   selectedColor: string;
   constructor() { }
 
   ngOnInit() {
+    console.log(this.colorMoves);
+    
+    this.colorMoves.subscribe(data => {
+      console.log(data);
+      
+    })
   }
+
+
 
   colorPicked(color: string): void {
     this.selectedColor = color;
