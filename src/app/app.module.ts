@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GuessPicComponent } from './guessPic/guessPic.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GuessPicComponent
   ],
   imports: [
     BrowserModule,
