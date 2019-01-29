@@ -1,0 +1,5 @@
+<div>
+  <color-pick *ngFor="let color of colors" [color]="color" (colorPicked)="colorPicked(color)">
+  </color-pick>
+  <div *ngIf="selectedColor">{{selectedColor}}</div>
+</div>

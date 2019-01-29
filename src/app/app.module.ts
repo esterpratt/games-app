@@ -3,12 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GuessPicComponent } from './guessPic/guessPic.component';
+import { SimonComponent } from './simon/simon.component';
+import { ColorPickComponent } from './simon/color-pick/color-pick.component';
+import { SimonConsoleComponent } from './simon/simon-console/simon-console.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GuessPicComponent
+    SimonComponent,
+    ColorPickComponent,
+    SimonConsoleComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
